@@ -2,8 +2,8 @@
 
 Microsoft Windows
 Powershell Hunting
-Versão SO -> #systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
-Patches instalados -> wmic qfe
+ - Versão SO -> #systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+ - Patches instalados -> wmic qfe
 Variáveis do Sistema -> set Get-ChildItem Env: | ft Key,Value
 Calculo de Hash -> Get-FileHash -Algorothm md5 arquivo.exe
 Processos Windows

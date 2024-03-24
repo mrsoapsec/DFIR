@@ -155,7 +155,8 @@ Linux
 
 
 # Ferramentas 
-[fulleventlogview-x64.zip](https://github.com/mrsoapsec/DFIR/files/14737047/fulleventlogview-x64.zip)
+
+[fulleventlogview-x64-new.zip](https://github.com/mrsoapsec/DFIR/files/14737079/fulleventlogview-x64-new.zip)
 [browsinghistoryview-x64.zip](https://github.com/mrsoapsec/DFIR/files/14737046/browsinghistoryview-x64.zip)
 [processhacker-2.39-setup.zip](https://github.com/mrsoapsec/DFIR/files/14737052/processhacker-2.39-setup.zip)
 

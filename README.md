@@ -4,9 +4,9 @@ Microsoft Windows
 Powershell Hunting
  - Versão SO -> #systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
  - Patches instalados -> wmic qfe
-Variáveis do Sistema -> set Get-ChildItem Env: | ft Key,Value
-Calculo de Hash -> Get-FileHash -Algorothm md5 arquivo.exe
-Processos Windows
+ - Variáveis do Sistema -> set Get-ChildItem Env: | ft Key,Value
+ - Calculo de Hash -> Get-FileHash -Algorothm md5 arquivo.exe
+ - Processos Windows
 Poster Sans, Find Evil Process: SANS_DFPS_FOR508_v4.10_02-23.pdf
 Windows System Processes MindMap: Windows.System.Processes.pdf
 Windows Services(Creation): Windows.Services.Creation.pdf

@@ -110,6 +110,8 @@ Informações osbre o documento -> olemeta documento.doc
 
 # [DRAFT] Investigacao Forense
 
+Windows
+
 systeminfo >> notes.txt
   
 netstat -nao >> notes.txt
@@ -138,7 +140,9 @@ net share >> notes.txt
   
 ipconfig /all >> notes.txt
 
+Linux
 
+find /caminho/do/diretorio -ctime -2
 
 
 
@@ -148,10 +152,6 @@ ipconfig /all >> notes.txt
 
 
 Powershell Hunting
-
-
-Linux
-
 
 
 # Ferramentas 

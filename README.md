@@ -161,6 +161,8 @@ Powershell Hunting
 [processhacker-2.39-setup.zip](https://github.com/mrsoapsec/DFIR/files/14737052/processhacker-2.39-setup.zip)
 
 - pestudio → Malware Assesment
+- Magnet DumpIt → Dump memoria ram
+- volatility → analise full de dump de memoria
 - Process Hacker → Atividades de processo do sistema
 - Regshot → Visualizar atividades do registro
 - Fiddler → Ver atividades de Rede

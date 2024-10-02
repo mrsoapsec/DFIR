@@ -257,3 +257,70 @@ inurl "t.me/joinchat" "APT"
 
 Automatização
 https://taksec.github.io/google-dorks-bug-bounty/
+
+
+Os principais tipos de ataques explorados por atacantes no **Active Directory (AD)** geralmente têm como objetivo comprometer a infraestrutura de autenticação e controle de acesso, obtendo privilégios elevados ou controle total da rede. Aqui estão alguns dos ataques mais comuns:
+
+### 1. **Pass-the-Hash (PtH)**
+   - **Como funciona**: O atacante rouba um hash de senha (geralmente de um administrador ou outro usuário privilegiado) e usa esse hash diretamente para se autenticar em outros sistemas sem precisar da senha em texto simples.
+   - **Impacto**: Pode permitir que um invasor se mova lateralmente pela rede e acesse recursos sensíveis.
+
+### 2. **Pass-the-Ticket (PtT)**
+   - **Como funciona**: O atacante obtém um ticket de autenticação (Kerberos TGT ou TGS) e o usa para acessar recursos protegidos.
+   - **Impacto**: Pode fornecer acesso a serviços protegidos dentro do domínio sem a necessidade de credenciais adicionais.
+
+### 3. **Golden Ticket**
+   - **Como funciona**: Um atacante compromete a conta de um **Domain Controller (DC)** e gera um **TGT (Ticket-Granting Ticket)** com permissões de domínio ilimitadas, essencialmente assumindo o controle total do ambiente AD.
+   - **Impacto**: O invasor pode obter controle administrativo sobre qualquer recurso dentro do domínio.
+
+### 4. **Silver Ticket**
+   - **Como funciona**: Um atacante cria manualmente um ticket Kerberos para um serviço específico (não o TGT), como o Serviço de Autenticação Remota ou SQL.
+   - **Impacto**: Embora o escopo seja menor que o de um Golden Ticket, ainda permite comprometimento de serviços individuais.
+
+### 5. **Kerberoasting**
+   - **Como funciona**: O atacante solicita tickets de serviço Kerberos (TGS) para contas de serviço e tenta quebrar offline os hashes de senhas.
+   - **Impacto**: Pode expor senhas de contas de serviço, muitas vezes configuradas com permissões elevadas, permitindo o movimento lateral na rede.
+
+### 6. **DCSync Attack**
+   - **Como funciona**: O invasor faz com que uma máquina se comporte como um controlador de domínio e solicita que outros DCs sincronizem suas senhas e hashes de senha. Isso permite que o atacante roube senhas de todas as contas de domínio.
+   - **Impacto**: Exposição massiva de credenciais e controle total sobre a rede.
+
+### 7. **DCShadow Attack**
+   - **Como funciona**: O atacante registra um controlador de domínio falso no AD, permitindo que ele execute alterações maliciosas diretamente nos dados do AD, sem gerar logs tradicionais.
+   - **Impacto**: Permite que o invasor manipule objetos no AD de forma invisível para sistemas de monitoramento padrão.
+
+### 8. **LDAP Reconnaissance**
+   - **Como funciona**: Atacantes fazem consultas ao protocolo LDAP do AD para mapear a estrutura de diretórios, encontrar contas privilegiadas e obter informações sobre políticas de segurança e configurações da rede.
+   - **Impacto**: Auxilia em ataques mais avançados, como elevação de privilégios e movimento lateral.
+
+### 9. **Overpass-the-Hash / Pass-the-Key**
+   - **Como funciona**: O atacante usa um hash de senha para derivar chaves Kerberos e se autenticar no AD.
+   - **Impacto**: Pode ser utilizado para explorar sessões e obter acesso privilegiado.
+
+### 10. **NTLM Relay**
+   - **Como funciona**: Atacantes capturam a comunicação NTLM (Challenge-Response) e a retransmitem para outro servidor para obter acesso. Usualmente é explorado em redes mal configuradas que ainda usam NTLM ao invés de Kerberos.
+   - **Impacto**: Permite elevação de privilégios e movimento lateral dentro da rede.
+
+### 11. **Skeleton Key Attack**
+   - **Como funciona**: Um malware é injetado no controlador de domínio, permitindo que o invasor use uma senha mestre em qualquer conta do domínio.
+   - **Impacto**: Controle total sobre qualquer conta do domínio.
+
+### 12. **Password Spraying**
+   - **Como funciona**: Em vez de tentar várias senhas em uma única conta (o que pode ser detectado rapidamente), o atacante tenta uma senha comum em várias contas.
+   - **Impacto**: Reduz a probabilidade de detecção e pode levar à descoberta de contas com senhas fracas.
+
+### 13. **Brute Force Attack**
+   - **Como funciona**: O atacante tenta descobrir senhas testando várias combinações até encontrar a correta.
+   - **Impacto**: Embora básico, pode ser eficaz contra contas com políticas de senha fracas.
+
+---
+
+**Mitigações:**
+Para proteger o AD contra esses ataques, as organizações podem implementar várias medidas, como:
+- **MFA (Autenticação Multifator)** para contas privilegiadas.
+- **Monitoramento contínuo** de logs e atividades anômalas no AD.
+- **Aplicação de políticas de senha robustas** e restrição de uso de NTLM.
+- **Segmentação de rede** e **limitação de credenciais de administração** de domínio a poucos usuários essenciais.
+
+O Active Directory é um alvo crítico, e sua segurança é essencial para a proteção da infraestrutura de TI.
+

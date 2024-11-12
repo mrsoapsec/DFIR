@@ -139,6 +139,7 @@ ipconfig /displaydns >> notes.txt
 net share >> notes.txt
   
 ipconfig /all >> notes.txt
+wmic -> product get name,version
 
 Linux
 

@@ -8,7 +8,7 @@
 - Patches instalados -> wmic qfe
 - Variáveis do Sistema -> set Get-ChildItem Env: | ft Key,Value
 - Calculo de Hash -> Get-FileHash -Algorothm md5 arquivo.exe
-- 
+- Softwares instalados -> wmic | product get name,version
 
 # Processos Windows
 - Poster Sans, Find Evil Process: [SANS_DFPS_FOR508_v4.10_02-23.pdf](https://github.com/mrsoapsec/CyberDefense/files/11436818/SANS_DFPS_FOR508_v4.10_02-23.pdf)
@@ -139,7 +139,7 @@ ipconfig /displaydns >> notes.txt
 net share >> notes.txt
   
 ipconfig /all >> notes.txt
-wmic -> product get name,version
+
 
 Linux
 

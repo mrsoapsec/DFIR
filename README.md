@@ -160,6 +160,7 @@ Powershell Hunting
 [fulleventlogview-x64-new.zip](https://github.com/mrsoapsec/DFIR/files/14737079/fulleventlogview-x64-new.zip)
 [browsinghistoryview-x64.zip](https://github.com/mrsoapsec/DFIR/files/14737046/browsinghistoryview-x64.zip)
 [processhacker-2.39-setup.zip](https://github.com/mrsoapsec/DFIR/files/14737052/processhacker-2.39-setup.zip)
+[chromehistoryview.zip](https://github.com/user-attachments/files/21446408/chromehistoryview.zip)
 
 - pestudio → Malware Assesment
 - Magnet DumpIt → Dump memoria ram
@@ -171,6 +172,7 @@ Powershell Hunting
 - OpenhashTab → Programa que inclui calculo de hash em todos executaveis que você clica com o botão direito
 - RecentFilesView → lista os ultimos arquivos abertos no sistema operacional
 - BrowsingHistoyView → Ferramenta de historico de sites navegados (vários navegadores)
+- ChromeHistoyView → Ferramenta de historico de sites navegados (vários navegadores)
 - Fulleventlogview → Ferramenta que contempla todos os logs do eventviewer do windows
   
 **SYSINTERNALS**

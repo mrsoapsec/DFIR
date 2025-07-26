@@ -172,7 +172,7 @@ Powershell Hunting
 - OpenhashTab → Programa que inclui calculo de hash em todos executaveis que você clica com o botão direito
 - RecentFilesView → lista os ultimos arquivos abertos no sistema operacional
 - BrowsingHistoyView → Ferramenta de historico de sites navegados (vários navegadores)
-- ChromeHistoyView → Ferramenta de historico de sites navegados (vários navegadores)
+- ChromeHistoyView → Ferramenta de historico de sites navegados (vários navegadores) (documentação de uso:https://www.nirsoft.net/utils/chrome_history_view.html)
 - Fulleventlogview → Ferramenta que contempla todos os logs do eventviewer do windows
   
 **SYSINTERNALS**
